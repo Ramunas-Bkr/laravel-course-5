@@ -14,7 +14,7 @@ class AddDiscountPriceToProductsTable extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->integer('discount_price')->after('price')->nullable();
+            $table->double('discount_price')->after('price')->nullable();
         });
     }
 
