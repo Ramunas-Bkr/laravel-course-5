@@ -146,7 +146,12 @@
 							<div class="product_extra product_new"><a href="categories.html">New</a></div>
 							<div class="product_content">
 								<div class="product_title"><a href="{{ route('showProduct', ['category', $product->id]) }}">{{ $product->title }}</a></div>
-								<div class="product_price">{{ number_format($product->price, 2) }} &euro;</div>
+								@if ($product->discount_price !== null)
+									<div class="product_discount">&euro; {{ number_format($product->price, 2) }}</div>
+									<div class="product_price">&euro; {{ number_format($product->discount_price, 2) }}</div>
+								@else
+									<div class="product_price">&euro; {{ number_format($product->price, 2) }}</div>
+								@endif
 							</div>
 						</div>													
 						@endforeach
