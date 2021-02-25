@@ -92,7 +92,7 @@
 	<div class="avds">
 		<div class="avds_container d-flex flex-lg-row flex-column align-items-start justify-content-between">
 			<div class="avds_small">
-				<div class="avds_background" style="background-image:url(images/avds_small.jpg)"></div>
+				<div class="avds_background" style="background-image:url(/images/avds_small.jpg)"></div>
 				<div class="avds_small_inner">
 					<div class="avds_discount_container">
 						<img src="images/discount.png" alt="">
@@ -145,7 +145,7 @@
 							<div class="product_image"><img src="images/{{ $image }}" alt="{{ $product->title }}"></div>
 							<div class="product_extra product_new"><a href="categories.html">New</a></div>
 							<div class="product_content">
-								<div class="product_title"><a href="product.html">{{ $product->title }}</a></div>
+								<div class="product_title"><a href="{{ route('showProduct', ['category', $product->id]) }}">{{ $product->title }}</a></div>
 								<div class="product_price">{{ number_format($product->price, 2) }} &euro;</div>
 							</div>
 						</div>													
