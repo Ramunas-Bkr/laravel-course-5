@@ -72,7 +72,7 @@
 							<div class="product_image"><img src="images/{{ $image }}" alt="{{ $product->title }}"></div>
 							<div class="product_extra product_new"><a href="{{ route('showCategory', $product->category['alias']) }}">{{$product->category['title']}}</a></div>
 							<div class="product_content">
-								<div class="product_title"><a href="{{ route('showProduct', ['category', $product->id]) }}">{{ $product->title }}</a></div>
+								<div class="product_title"><a href="{{ route('showProduct', ['category', $product->alias]) }}">{{ $product->title }}</a></div>
 								@if ($product->discount_price !== null)
 									<div class="product_discount">&euro; {{ number_format($product->price, 2) }}</div>
 									<div class="product_price">&euro; {{ number_format($product->discount_price, 2) }}</div>
