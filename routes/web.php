@@ -17,4 +17,5 @@ use App\Http\Controllers\ProductController;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
+Route::get('/{category}', [ProductController::class, 'showCategory'])->name('showCategory');
 Route::get('/{category}/{product_id}', [ProductController::class, 'show'])->name('showProduct');

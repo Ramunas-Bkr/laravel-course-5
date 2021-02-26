@@ -1146,8 +1146,7 @@ section {
     position: absolute;
     top: 0;
     left: 54px;
-    width: 66px;
-    height: 36px;
+    max-width: 92px;
     text-align: center;
     -webkit-transform-origin: top left;
     -moz-transform-origin: top left;
@@ -1162,7 +1161,7 @@ section {
     font-size: 16px;
     font-weight: 500;
     color: #FFFFFF;
-    line-height: 36px;
+    padding: 0 10px;
 }
 
 .product_new {

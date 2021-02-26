@@ -15,4 +15,9 @@ class ProductController extends Controller
             'item' => $item
         ]);
     }
+
+    public function showCategory($alias)
+    {
+        # code...
+    }
 }
