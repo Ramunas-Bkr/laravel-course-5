@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Category;
 
 class ProductController extends Controller
 {
@@ -16,8 +17,12 @@ class ProductController extends Controller
         ]);
     }
 
-    public function showCategory($alias)
+    public function showCategory($cat_alias)
     {
-        # code...
+        $cat = Category::where('alias', $cat_alias)->first();
+        
+        return view('categories.index', [
+            'cat' => $cat
+        ]);
     }
 }
